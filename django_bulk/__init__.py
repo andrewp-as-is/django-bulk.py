@@ -40,6 +40,12 @@ def bulk_update():
     bulk_update_fields.clear()
     bulk_update_objs.clear()
 
+def clear():
+    bulk_create_objs.clear()
+    bulk_delete_objs.clear()
+    bulk_update_fields.clear()
+    bulk_update_objs.clear()
+
 def execute():
     if bulk_create_objs or bulk_delete_objs or bulk_update_objs:
         with transaction.atomic():
